@@ -1,6 +1,5 @@
 package bsu.rfe.java.group8.lab2.Yury.varA4;
 
-
 import java.awt.Toolkit;
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
@@ -47,7 +46,8 @@ public class Main {
     // Визуализатор ячеек таблицы
     private GornerTableCellRenderer renderer = new GornerTableCellRenderer();
 
-   
+    // Модель данных с результатами вычислений
+    private GornerTableModel data;
 
     public Main(Double[] coefficients) {
         super("Табулирование многочлена на отрезке по схеме Горнера");
