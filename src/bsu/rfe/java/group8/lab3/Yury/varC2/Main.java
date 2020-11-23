@@ -1,19 +1,16 @@
 package bsu.rfe.java.group8.lab3.Yury.varC2;
 
+
 import java.awt.BorderLayout;
-import java.awt.Dimension;
-import java.awt.FlowLayout;
-import java.awt.Image;
+
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.io.DataOutputStream;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.PrintStream;
 import java.text.DecimalFormat;
-import java.text.DecimalFormatSymbols;
 import java.text.NumberFormat;
 
 import javax.swing.AbstractAction;
@@ -22,7 +19,6 @@ import javax.swing.BorderFactory;
 import javax.swing.Box;
 import javax.swing.JButton;
 import javax.swing.JFileChooser;
-import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
@@ -70,7 +66,8 @@ public class Main {
     // Визуализатор ячеек таблицы
     private GornerTableCellRenderer renderer = new GornerTableCellRenderer();
 
-   
+    // Модель данных с результатами вычислений
+    private GornerTableModel data;
 
     public Main(Double[] coefficients) {
         super("Табулирование многочлена на отрезке по схеме Горнера");
@@ -335,7 +332,7 @@ public class Main {
         hBoxResult.add(new JPanel());
     // Установить контейнер hBoxResult в главной (центральной) области граничной компоновки
     getContentPane().add(hBoxResult, BorderLayout.CENTER);
-
+}
 
     protected void saveToGraphicsFile(File selectedFile) {
         try {
@@ -405,32 +402,8 @@ public class Main {
         }
     }
 
+
     public static void main(String[] args) {
-        // Если не задано ни одного аргумента командной строки -
-        // Продолжать вычисления невозможно, коэффиценты неизвестны
-        if (args.length == 0) {
-            System.out.println("Невозможно табулировать многочлен, для которого не задано ни одного коэффициента!");
-            System.exit(-1);
-        }
-        // Зарезервировать места в массиве коэффициентов столько, сколько аргументов командной строки
-        Double[] coefficients = new Double[args.length];
-        int i = 0;
-        try {
-            // Перебрать аргументы, пытаясь преобразовать их в Double
-            for (String arg : args) {
-                coefficients[i++] = Double.parseDouble(arg);
-            }
-        } catch (NumberFormatException ex) {
-            // Если преобразование невозможно - сообщить об ошибке и завершиться
-            System.out.println("Ошибка преобразования строки '" +
-                    args[i] + "' в число типа Double");
-            System.exit(-2);
-        }
-        // Создать экземпляр главного окна, передав ему коэффициенты
-        Main frame = new Main(coefficients);
-        // Задать действие, выполняемое при закрытии окна
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        // Показать главное окно
-        frame.setVisible(true);
+	// write your code here
     }
 }
