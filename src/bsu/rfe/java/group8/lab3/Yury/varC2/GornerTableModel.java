@@ -1,13 +1,8 @@
-package bsu.rfe.java.group8.lab2.Yury.varA4;
+package bsu.rfe.java.group8.lab3.Yury.varC2;
 
 import javax.swing.table.AbstractTableModel;
 
-<<<<<<< HEAD
 public class GornerTableModel {
-=======
-public class GornerTableModel extends AbstractTableModel {
-
->>>>>>> WorkSpace
     private Double[] coefficients;
     private Double from;
     private Double to;

@@ -1,4 +1,4 @@
-package bsu.rfe.java.group8.lab2.Yury.varA4;
+package bsu.rfe.java.group8.lab3.Yury.varC2;
 
 import java.awt.Color;
 import java.awt.Component;
@@ -21,8 +21,6 @@ public class GornerTableCellRenderer implements TableCellRenderer {
     private String needleX = null;
     private String needleY = null;
 
-    // Модель данных с результатами вычислений
-    private GornerTableModel data;
 
     private DecimalFormat formatter = (DecimalFormat) NumberFormat.getInstance();
 
