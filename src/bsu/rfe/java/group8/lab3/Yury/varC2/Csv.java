@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.ArrayList;
 
 
-public class CSV {
+public class Csv {
     public static class Writer {
         private Appendable appendable;
 
